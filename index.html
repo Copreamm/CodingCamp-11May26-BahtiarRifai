@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense & Budget Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Dark/Light Toggle -->
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      aria-label="Toggle dark/light mode"
+    >
+      <span class="theme-icon">🌙</span>
+    </button>
+
+    <div class="app-wrapper">
+      <header class="app-header">
+        <div class="header-inner">
+          <div class="logo-mark">💰</div>
+          <h1 class="app-title">Expense &amp; Budget Visualizer</h1>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <!-- Balance Card -->
+        <section class="balance-card" id="balanceCard">
+          <p class="balance-label">TOTAL BALANCE</p>
+          <p class="balance-amount" id="totalBalance">$0.00</p>
+          <div class="balance-subinfo">
+            <span id="txCount">0 transactions</span>
+            <span class="dot">·</span>
+            <span id="spendSummary">$0.00 spent</span>
+          </div>
+        </section>
+
+        <!-- Monthly Summary -->
+        <section class="monthly-summary card" id="monthlySummary">
+          <div class="section-header">
+            <h2 class="section-title">Monthly Summary</h2>
+            <select id="monthFilter" class="month-select">
+              <option value="all">All Time</option>
+            </select>
+          </div>
+          <div class="monthly-stats" id="monthlyStats">
+            <div class="stat-item">
+              <span class="stat-value" id="monthTotal">$0.00</span>
+              <span class="stat-label">Total Spent</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="monthTop">—</span>
+              <span class="stat-label">Top Category</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="monthCount">0</span>
+              <span class="stat-label">Transactions</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Add Transaction Form -->
+        <section class="form-card card">
+          <h2 class="section-title">Add Transaction</h2>
+          <div class="form-group">
+            <label class="form-label" for="itemName">Item Name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="itemName"
+              placeholder="e.g. Coffee, Bus ticket…"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="amount">Amount ($)</label>
+            <input
+              class="form-input"
+              type="number"
+              id="amount"
+              placeholder="0.00"
+              min="0"
+              step="0.01"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="category">Category</label>
+              <select class="form-select" id="category">
+                <option value="Food">🍔 Food</option>
+                <option value="Transport">🚌 Transport</option>
+                <option value="Fun">🎉 Fun</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="customCategory"
+                >Custom Category</label
+              >
+              <input
+                class="form-input"
+                type="text"
+                id="customCategory"
+                placeholder="Or type your own…"
+              />
+            </div>
+          </div>
+
+          <button class="btn-add" id="addBtn">
+            <span class="btn-icon">+</span> Add Transaction
+          </button>
+          <p class="form-error hidden" id="formError">
+            ⚠ Please fill in all required fields.
+          </p>
+        </section>
+
+        <!-- Bottom Grid: Transaction list + Chart -->
+        <div class="bottom-grid">
+          <!-- Transaction List -->
+          <section class="transactions-card card">
+            <div class="section-header">
+              <h2 class="section-title">Transactions</h2>
+              <div class="sort-controls">
+                <select class="sort-select" id="sortSelect">
+                  <option value="newest">Newest</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="highest">Highest $</option>
+                  <option value="lowest">Lowest $</option>
+                  <option value="category">Category</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="tx-list" id="txList">
+              <div class="empty-state" id="emptyState">
+                <span class="empty-icon">🧾</span>
+                <p>No transactions yet.<br />Add one above to get started!</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Chart -->
+          <section class="chart-card card">
+            <h2 class="section-title">Spending by Category</h2>
+            <div class="chart-wrap">
+              <canvas id="pieChart"></canvas>
+              <div class="chart-empty hidden" id="chartEmpty">
+                <span>📊</span>
+                <p>Chart appears when you add transactions</p>
+              </div>
+            </div>
+            <div class="chart-legend" id="chartLegend"></div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <p>Jung Ahyeon Supremacy</p>
+      </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
