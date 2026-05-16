@@ -9,7 +9,7 @@
 
 A clean, mobile-friendly web app to track your daily spending — with real-time charts, category breakdowns, and local data storage. No backend. No login. Just open and use.
 
-**[🚀 Live Demo](https://your-username.github.io/your-repo-name)**
+**[🚀 Live Demo](https://Copreamm.github.io/CodingCamp-11May26-BahtiarRifai)**
 
 </div>
 
@@ -34,16 +34,6 @@ A clean, mobile-friendly web app to track your daily spending — with real-time
 
 ---
 
-## 📸 Preview
-
-| Light Mode          | Dark Mode           |
-| ------------------- | ------------------- |
-| _(screenshot here)_ | _(screenshot here)_ |
-
-> **Tip:** You can add screenshots by dragging images into this file on GitHub.
-
----
-
 ## 🗂️ Project Structure
 
 ```
@@ -65,15 +55,15 @@ No installation needed. Just open the file in your browser.
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Copreamm/CodingCamp-11May26-BahtiarRifai.git
 
 # Open the app
-cd your-repo-name
+cd CodingCamp-11May26-BahtiarRifai
 open index.html   # macOS
 # or just double-click index.html on Windows/Linux
 ```
 
-Or visit the live site directly: **[your-username.github.io/your-repo-name](https://your-username.github.io/your-repo-name)**
+Or visit the live site directly: **[Copreamm.github.io/CodingCamp-11May26-BahtiarRifai](https://Copreamm.github.io/CodingCamp-11May26-BahtiarRifai)**
 
 ---
 
@@ -110,19 +100,19 @@ Or visit the live site directly: **[your-username.github.io/your-repo-name](http
 3. Under **Source**, select `main` branch and `/ (root)` folder
 4. Click **Save** — your site will be live in ~1 minute at:
    ```
-   https://your-username.github.io/your-repo-name
+   https://github.com/Copreamm/CodingCamp-11May26-BahtiarRifai.git
    ```
 
 ---
 
 ## 🏫 About
 
-This project was built as part of the **SEFC Coding Camp** (Batch: May 2026).
+This project was built as part of the **RevoU Coding Camp Final Task** (Batch: May 2026).
 
 > Built with pure HTML, CSS, and Vanilla JavaScript — no frameworks, no backend, just fundamentals.
 
 ---
 
 <div align="center">
-  Made with ❤️ · Data stays on your device, always.
+  Made by Jerr.
 </div>
