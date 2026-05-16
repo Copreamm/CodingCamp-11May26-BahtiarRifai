@@ -78,8 +78,6 @@ Or visit the live site directly: **[Copreamm.github.io/CodingCamp-11May26-Bahtia
 | Storage   | Browser LocalStorage API                                        |
 | Fonts     | [DM Sans + DM Mono](https://fonts.google.com/) via Google Fonts |
 
-> Zero frameworks. Zero dependencies to install. Zero backend.
-
 ---
 
 ## 📋 How to Use
